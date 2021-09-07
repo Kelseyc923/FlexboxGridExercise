@@ -60,25 +60,133 @@ section:not(#three) {
   
   /* START BELOW THIS LINE */
 
+  /* 1 */
   #one {
       display: flex;
-      flex-direction: row-reverse;
-      flex-direction: column-reverse;
+      
+      /* 2 */
+      justify-content: flex-end;
+
+      /* 3 */
+      flex-direction: column;
+
+      /* 4 */
       align-items: center;
   }
 
+  /* 5 */
   #two {
     display: flex;
-    flex-direction: column-reverse;
-    flex-direction: row;
-    justify-content: center;
+
+    /* 6 */
     align-items: center;
-    box-sizing: border-box;
-    grid-gap: 200px;
+
+    /* 7 */
+    justify-content: space-between;
+
+    /* 8 */
+    flex-wrap: wrap;
+
     }
 
+    /* 9 */
     #three {
       display: grid;
-      grid-template-columns: 125px 125px 125px 125px;
-      grid-auto-rows: 100px 100px;
+
+      /* 10 */
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      /* OR */
+      /* grid-template-columns: repeat(4. 1fr); */
+
+      /* 11 */
+      grid-auto-rows: 100px;
+      grid-template-rows: 50px;
     }
+
+    /* BONUS */
+    /* 1 */
+    #one {
+      flex-direction: column-reverse;
+    }
+
+    /* 2 */
+    #orange {
+      order: 2;
+    }
+
+    #purple {
+      order: 3;
+    }
+
+    #brown {
+      order: 1;
+    }
+
+    /* 3 */
+    #purple {
+      align-self: flex-end;
+    }
+
+    #brown {
+      align-self: flex-start;
+    }
+
+    /* 4 */
+    #p-one {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      /* OR */
+      /* grid-column: span 2/auto; */
+      }
+
+      #p-two {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        /* OR */
+        /* grid-column: span 2/auto; */
+      }
+
+      #p-three {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        /* OR */
+        /* grid-row: span 2/auto */
+      }
+
+      #p-four {
+        grid-row-start: 2; 
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        /* OR */
+        /* grid-row: span 2/auto */
+        /* grid-column: span 2/auto */
+      }
+
+      #p-five {
+        grid-row-start: 2;
+        grid-row-end: 5;
+        /* OR */
+        /* grid-row: span 3/auto; */
+
+      }
+      
+      #p-six {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        /* OR */
+        /* grid-column: span 3/auto; */
+      }
+
+      /* #p-seven {
+        No style needed for #p-seven because it defaults to just taking up a single row and column
+      } */
+
+      #p-eight {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        /* OR */
+        /* grid-column: span3/auto */
+      }
+
+    
